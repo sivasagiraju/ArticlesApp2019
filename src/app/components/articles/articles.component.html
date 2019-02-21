@@ -1,0 +1,61 @@
+<p>
+  articles works!
+</p>
+
+<!-- <div class="container" [formGroup]="filterForm">
+  <div class="search-bar">
+    <input formControlName="search" placeholder="Search by pony name">
+    <select formControlName="is_available">
+      <option [value]="null">Is available?</option>
+      <option [value]="true">Yes</option>
+      <option [value]="false">No</option>
+    </select>
+  </div>
+
+  <div *ngFor="let pony of (page | async)?.results" [ngClass]="{'available': pony.is_available, 'pony': true}">
+    {{ pony.name }}
+  </div>
+
+  <app-paginator [page]="page | async" (pageChange)="onPageChanged($event)"></app-paginator>
+</div> -->
+
+
+<!-- <h2>{{articles | json}}</h2> -->
+<div class="row">
+  <div class="col-md-2">&nbsp;</div>
+  <div class="col-md-8">
+    <table style="width: 100%">
+
+      <tbody>
+        <tr *ngFor="let x of articles">
+          <td style=" margin: 10px 0px 10px 0px">
+            <div class="row">
+              <div class="col-md-12">
+                {{ x.articleName }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                Rating : *****
+              </div>
+              <div class="col-md-9">
+                {{ x.articleDescription }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                Published : {{ x.createdDate | date: 'dd MMM yyyy' }}
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="height: 10px;">                  
+                </div>
+              </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2">&nbsp;</div>
+</div>
